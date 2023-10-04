@@ -54,6 +54,48 @@
             /* Prevent image from repeating */
         }
     </style>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .person-card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(0deg);
+            transition: transform 0.5s;
+            margin-bottom: 20px;
+        }
+
+        .person-card:hover {
+            transform: perspective(1000px) rotateY(10deg);
+        }
+
+        .person-details {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
 
 </head>
 
@@ -460,12 +502,46 @@
         </div>
     </section>
     <div class="container">
-        <div class="frame">
-            <h2>RESOURCE PERSONS</h2>
+        <div class="person-card">
+            <div class="person-details">
+                <h2>Bhavani Prasad Karrotu</h2>
+                <p>Co-Founder & Design head, PurpleLane, Hyderabad</p>
+            </div>
+        </div>
 
-            <P style="text-align: left;  padding: 0 40px;"> Bhavani Prasad Karrotu <br>Co-Founder & Design head, PurpleLane , Hyderabad<br> Venkatesh Nene <br>Senior UX Designer , IVY Comptech, Hyderabad<br> Nanda Kishore<br> Product Designer, Bizom, Bangalore <br>V.V. Durga Kiran<br> Associate S/w
-                Engineer, Cognizant Technology Solutions, <br>Hyderabad <br>Mantena Siva Pavan Kumara Raju <br>Director & Founder, Carryshare Solution Pvt Ltd, WG Dist, AP<br> Dr. Suresh Babu Mudunuri<br> Professor, SRKR Engineering College, Bhimavaram
-            </p>
+        <div class="person-card">
+            <div class="person-details">
+                <h2>Venkatesh Nene</h2>
+                <p>Senior UX Designer, IVY Comptech, Hyderabad</p>
+            </div>
+        </div>
+
+        <div class="person-card">
+            <div class="person-details">
+                <h2>Nanda Kishore</h2>
+                <p>Product Designer, Bizom, Bangalore</p>
+            </div>
+        </div>
+
+        <div class="person-card">
+            <div class="person-details">
+                <h2>V.V. Durga Kiran</h2>
+                <p>Associate S/w Engineer, Cognizant Technology Solutions, Hyderabad</p>
+            </div>
+        </div>
+
+        <div class="person-card">
+            <div class="person-details">
+                <h2>Mantena Siva Pavan Kumara Raju</h2>
+                <p>Director & Founder, Carryshare Solution Pvt Ltd, WG Dist, AP</p>
+            </div>
+        </div>
+
+        <div class="person-card">
+            <div class="person-details">
+                <h2>Dr. Suresh Babu Mudunuri</h2>
+                <p>Professor, SRKR Engineering College, Bhimavaram</p>
+            </div>
         </div>
     </div>
 
