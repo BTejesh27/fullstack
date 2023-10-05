@@ -30,6 +30,61 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
     <style>
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .scene3d {
+            perspective: 1000px;
+            width: 600px;
+            height: 340px;
+        }
+        
+        .object3d {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            transform-style: preserve-3d;
+        }
+        
+        .face3d {
+            position: absolute;
+            left: 165px;
+            top: 15px;
+        }
+        
+        #im1 {
+            transform: translateZ(150px);
+        }
+        
+        #im2 {
+            transform: translateZ(-150px);
+        }
+        
+        .scene3d.begin {
+            perspective: 100000px;
+        }
+        
+        .scene3d.end {
+            perspective: 1000px;
+        }
+        
+        #obj1 {
+            animation: theRotate 4s linear infinite;
+        }
+        
+        @keyframes theRotate {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -263,9 +318,24 @@
     </div>
 
     <!-- service section -->
-    <div>
-        <img src="images/anime.jpg"  width="1150" height="600">
+    <br><br><br>
+
+
+
+    <br><br><br>
+    <br><br><br>
+
+    <div class="center-container">
+        <div class="scene3d">
+            <div class="object3d" id="obj1">
+                <img src="images/ideal.png" id="im1" class="face3d" style="width: 100px;height: 100px;">
+                <img src="images/3pic.png" id="im2" class="face3d" style="width: 100px;  height: 100px;">
+                <img src="images/srlogo.png" id="im3" class="face3d" style="width: 100px;  height: 100px;">
+            </div>
+
+        </div>
     </div>
+
 
     <section class="service_section layout_padding" id="service">
         <div class="container">
