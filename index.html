@@ -108,7 +108,7 @@
         
         .animate-charcter {
             text-transform: uppercase;
-            background-image: linear-gradient( -225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+            background-image: linear-gradient( -225deg, #8c79d1 0%, #7ed95d 29%, #ff1361 67%, #fff800 100%);
             background-size: auto auto;
             background-clip: border-box;
             background-size: 50% auto;
@@ -143,6 +143,27 @@
                 background-position: 50% center;
             }
         }
+        
+        .waviy {
+            position: relative;
+        }
+        
+        .waviy span {
+            position: relative;
+            display: inline-block;
+            font-size: 40px;
+            color: #fff;
+            text-transform: uppercase;
+            animation: flip 2s infinite;
+            animation-delay: calc(.2s * var(--i))
+        }
+        
+        @keyframes flip {
+            0%,
+            80% {
+                transform: rotateY(360deg)
+            }
+        }
     </style>
 
 
@@ -150,14 +171,22 @@
 </head>
 
 <body>
+    <div style="background-color: #000000;">
+        <h1>
+            <br>
+        </h1>
 
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h6 class="animate-charcterS"> SRKR PRESENTS FDP</h6>
+                <h6 class="animate-charcterS"> SRKR ENIGNEERING COLLEGE PRESENTS FDP</h6>
+
             </div>
+
         </div>
     </div>
+
 
     <div class="hero_area">
         <!-- header section strats -->
@@ -168,8 +197,9 @@
                     <a class="navbar-brand" href="index.html">
                         <span><div class="container">
                             <div class="row">
-                              <div class="col-md-12 text-center">
+                              <div class="col-md-12 text-center"><img src="images/aac.png" width="30%"  alt="">
                                 <h3 class="animate-charcter"> FDP BY ATAL</h3>
+                                
                               </div>
                             </div>
                           </div>
@@ -217,9 +247,12 @@
                 <br>
             </div>
         </header>
+
         <!-- end header section -->
         <!-- slider section -->
-        <section class="slider_section " style=" background-image: url(images/wph.jpg);  border-collapse: collapse; background-size: cover;">
+
+        <section class="slider_section " style=" background-image: url(images/op.jpg);  border-collapse: collapse; background-size: cover;">
+            <hr style="border-color: white;">
             <div id="customCarousel1" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
 
@@ -348,7 +381,16 @@
                                     <div class="row">
                                         <div class=" col-lg-10 mx-auto">
                                             <div class="img-box">
-                                                <img src="images/idea_lab.png" alt="imgage">
+                                                <div class="center-container">
+                                                    <div class="scene3d">
+                                                        <div class="object3d" id="obj1">
+                                                            <img src="images/idea_lab.png" id="im1" class="face3d" style="width: 200px;height: 200px;">
+                                                            <img src="images/atal.png" id="im3" class="face3d" style="width: 200px;  height: 200px;">
+                                                            <img src="images/srlogo.png" id="im2" class="face3d" style="width: 200px;  height: 200px;">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
