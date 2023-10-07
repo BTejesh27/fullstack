@@ -61,7 +61,8 @@
         }
         
         #im2 {
-            transform: translateZ(-150px);
+            transform: translateZ(-150px) scaleX(-1);
+            /* Apply scaleX(-1) to correct inversion */
         }
         
         .scene3d.begin {
@@ -77,10 +78,10 @@
         }
         
         @keyframes theRotate {
-            from {
+            0% {
                 transform: rotateY(0deg);
             }
-            to {
+            100% {
                 transform: rotateY(360deg);
             }
         }
@@ -93,17 +94,23 @@
             background-size: cover;
         }
         
+        li {
+            font-size: 20px;
+        }
+        
         tr,
         td {
             border: 3px solid #000000;
             padding: 8px;
             text-align: center;
+            font-size: 20px;
         }
         
         th {
             border: 3px solid #000000;
             padding: 20px;
             text-align: center;
+            font-size: 40px;
         }
         
         .animate-charcter {
@@ -152,7 +159,7 @@
             position: relative;
             display: inline-block;
             font-size: 40px;
-            color: #fff;
+            color: #090909;
             text-transform: uppercase;
             animation: flip 2s infinite;
             animation-delay: calc(.2s * var(--i))
@@ -295,7 +302,16 @@
                                     <div class="row">
                                         <div class=" col-lg-10 mx-auto">
                                             <div class="img-box">
-                                                <img src="images/atal.png" alt="">
+                                                <div class="center-container">
+                                                    <div class="scene3d">
+                                                        <div class="object3d" id="obj1">
+                                                            <img src="images/idea_lab.png" id="im1" class="face3d" style="width: 300px;height: 300px;">
+                                                            <img src="images/atal.png" id="im3" class="face3d" style="width: 300px;  height: 300px;">
+                                                            <img src="images/srlogo.png" id="im2" class="face3d" style="width: 300px;  height: 300px;">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -345,7 +361,16 @@
                                     <div class="row">
                                         <div class=" col-lg-10 mx-auto">
                                             <div class="img-box">
-                                                <img src="images/srlogo.png" alt="">
+                                                <div class="center-container">
+                                                    <div class="scene3d">
+                                                        <div class="object3d" id="obj1">
+                                                            <img src="images/idea_lab.png" id="im1" class="face3d" style="width: 300px;height: 300px;">
+                                                            <img src="images/atal.png" id="im3" class="face3d" style="width: 300px;  height: 300px;">
+                                                            <img src="images/srlogo.png" id="im2" class="face3d" style="width: 300px;  height: 300px;">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -384,9 +409,9 @@
                                                 <div class="center-container">
                                                     <div class="scene3d">
                                                         <div class="object3d" id="obj1">
-                                                            <img src="images/idea_lab.png" id="im1" class="face3d" style="width: 200px;height: 200px;">
-                                                            <img src="images/atal.png" id="im3" class="face3d" style="width: 200px;  height: 200px;">
-                                                            <img src="images/srlogo.png" id="im2" class="face3d" style="width: 200px;  height: 200px;">
+                                                            <img src="images/idea_lab.png" id="im1" class="face3d" style="width: 300px;height: 300px;">
+                                                            <img src="images/atal.png" id="im3" class="face3d" style="width: 300px;  height: 300px;">
+                                                            <img src="images/srlogo.png" id="im2" class="face3d" style="width: 300px;  height: 300px;">
                                                         </div>
 
                                                     </div>
@@ -413,38 +438,14 @@
         </section>
         <!-- end slider section -->
     </div>
-    <br>
-    <br>
-
-    <!-- service section -->
-    <br><br><br>
-
-
-
-
-    <br><br><br>
-    <br><br><br>
-
-    <div class="center-container">
-        <div class="scene3d">
-            <div class="object3d" id="obj1">
-                <img src="images/idea_lab.png" id="im1" class="face3d" style="width: 100px;height: 100px;">
-                <img src="images/atal.png" id="im2" class="face3d" style="width: 100px;  height: 100px;">
-                <img src="images/srlogo.png" id="im3" class="face3d" style="width: 100px;  height: 100px;">
-            </div>
-
-        </div>
-    </div>
-
+    <br><br>
 
 
 
     <section class="service_section layout_padding" id="service">
         <div class="container">
             <div class="heading_container heading_center">
-                <h2>
-                    Schedule
-                </h2>
+                <h1 class="animate-charcter" style="font-size: 100px;;"> SCHEDULE </h1>
             </div>
         </div>
 
@@ -535,15 +536,15 @@
 
 
 
-        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
 
 
-        <a href="">
-                Go to Top
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        <a style="text-align: center;" href="">
+            <div style="text-align: LEFT;">
+                <h3 class="animate-charcter" style="font-size: 30px;">GO TO TOP </h3>
+            </div>
 
-              </a>
+        </a>
 
         </div>
         </div>
@@ -578,6 +579,7 @@
                     <div class="detail-box">
                         <div class="heading_container">
                             <h2>OBJECTIVES OF THE FDP</h2>
+                            <BR>
                             <ul style="text-align: left;">
                                 <meta charset="UTF-8">
 
@@ -600,7 +602,9 @@
     <div class="container">
         <div class="frame">
             <br><br>
-            <h6 style="font-size: 20px; font-weight: bold; margin-bottom: 20px;"> <br> RESOURCES PERSONS</h6>
+            <div style="text-align: center;">
+                <h4 class="animate-charcter" style="font-size: 40px;">RESOURCE PERSONS</h4>
+            </div>
 
             <table>
                 <tr>
@@ -650,9 +654,7 @@
     <section class="price_section layout_padding">
         <div class="container">
             <div class="heading_container heading_center">
-                <h2 id="outcomes">
-                    OUTCOMES
-                </h2>
+                <h4 class="animate-charcter" style="font-size: 40px;">OUTCOMES</h4>
             </div>
             <div class="price_container ">
                 <div class="box">
@@ -777,15 +779,33 @@
     <a href="" class="btn-2">
 
 
-
-        <h1 style="font-size: 24px; text-align:center" id="Patrons">College Patrons and Coordinators</h1>
+        <div style="text-align: center;">
+            <h1 class="animate-charcter" style="font-size: 40px" id="Patrons">College Patrons and Coordinators</h1>
+        </div>
     </a>
+
     </header>
 
     <div style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 5px; text-align:center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
 
         <section>
-            <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 20px;"> <br> Chief Patrons</h2>
+            <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 20px;"> <br>
+                <div class="waviy">
+                    <span style="--i:1">C</span>
+                    <span style="--i:2">H</span>
+                    <span style="--i:3">I</span>
+                    <span style="--i:4">E</span>
+                    <span style="--i:5">F</span>
+                    <span style="--i:6"> </span>
+                    <span style="--i:7">P</span>
+                    <span style="--i:1">A</span>
+                    <span style="--i:2">T</span>
+                    <span style="--i:3">R</span>
+                    <span style="--i:4">O</span>
+                    <span style="--i:5">N</span>
+                    <span style="--i:8">S</span>
+                </div>
+            </h2>
             <ul style="list-style-type: none; padding: 0;">
                 <li>Sri. S. Prasad Raju - President, SRKREC</li>
                 <li>Sri. P. Krishnam Raju - Chairman, SRKREC</li>
@@ -795,7 +815,18 @@
         </section>
 
         <section>
-            <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 20px;"> <br> Patrons</h2>
+            <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 20px;"> <br>
+                <div class="waviy">
+
+                    <span style="--i:7">P</span>
+                    <span style="--i:1">A</span>
+                    <span style="--i:2">T</span>
+                    <span style="--i:3">R</span>
+                    <span style="--i:4">O</span>
+                    <span style="--i:5">N</span>
+                    <span style="--i:8">S</span>
+                </div>
+            </h2>
             <ul style="list-style-type: none; padding: 0;">
                 <li>Sri. S. R. K. Nishant Varma - Secretary & Correspondent, SRKREC</li>
                 <li>Dr. M. Jagapathi Raju - Principal, SRKREC, Convenor</li>
@@ -803,7 +834,23 @@
         </section>
 
         <section>
-            <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 20px;"> <br> Co-ordinators</h2>
+            <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 20px;"> <br>
+                <div class="waviy">
+                    <span style="--i:1">C</span>
+                    <span style="--i:2">O</span>
+                    <span style="--i:2">-</span>
+                    <span style="--i:3">O</span>
+                    <span style="--i:4">R</span>
+                    <span style="--i:5">D</span>
+                    <span style="--i:6">I</span>
+                    <span style="--i:7">N</span>
+                    <span style="--i:1">A</span>
+                    <span style="--i:2">T</span>
+                    <span style="--i:3">O</span>
+                    <span style="--i:4">R</span>
+                    <span style="--i:8">S</span>
+                </div>
+            </h2>
             <ul style="list-style-type: none; padding: 0;">
                 <li>Dr. Suresh Babu Mudunuri - Professor IT, SRKREC</li>
                 <li>Dr. NGK Murthy - Professor IT, SRKREC</li>
@@ -820,9 +867,7 @@
     <section class="contact_section layout_padding-bottom" id="contact">
         <div class="container">
             <div class="heading_container heading_center">
-                <h2>
-                    Get In Touch
-                </h2>
+                <h4 class="animate-charcter" style="font-size: 40px;">GET IN TOUCH</h4>
             </div>
             <div class="row">
                 <div class="col-md-8 col-lg-6 mx-auto">
