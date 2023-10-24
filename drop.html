@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Define your CSS variables */
+        
+         :root {
+            --green: #91d36b;
+            --orange: #fc9b1b;
+            --lightGrey: #999;
+            --grey: #444;
+            --darkGrey: #333;
+        }
+        /* Reset some default styles */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Define styles for the menu */
+        
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            margin: 0 auto;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        ol {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.5em 0;
+            list-style: none;
+        }
+        
+        .menu-item {
+            background: var(--grey);
+            padding: 1em 0.5em;
+            position: relative;
+            border-bottom: 5px solid var(--lightGrey);
+            margin: 0 0.1em;
+            transition: border-bottom 0.23s ease-in-out, background 0.23s linear;
+            cursor: pointer;
+            min-width: 8em;
+            text-align: center;
+        }
+        
+        .menu-item[aria-haspopup="true"] {
+            border-bottom-color: var(--orange);
+        }
+        
+        .menu-item:hover,
+        .menu-item:focus-within {
+            border-bottom-color: var(--green);
+            background: var(--darkGrey);
+        }
+        
+        .sub-menu {
+            visibility: hidden;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            left: 0;
+            margin-top: 1em;
+        }
+        
+        .menu-item:hover .sub-menu,
+        .sub-menu:hover {
+            visibility: visible;
+            opacity: 1;
+            display: flex;
+        }
+        
+        .menu-item {
+            margin: 0.1em 0;
+            padding: 1em;
+            width: 10em;
+            text-align: center;
+            z-index: 2;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        a:focus {
+            outline: none;
+        }
+        
+        @media (max-width: 690px) {
+            .menu {
+                width: 95%;
+                font-size: 16px;
+            }
+            .menu-item {
+                margin: 0.1em;
+            }
+            .menu-item:nth-child(1) {
+                order: 0;
+            }
+            .menu-item:nth-child(2) {
+                order: 1;
+            }
+            .menu-item:nth-child(3) {
+                order: 3;
+            }
+            .menu-item:nth-child(4) {
+                order: 4;
+            }
+            .menu-item:nth-child(5) {
+                order: 2;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .menu {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu" role='navigation'>
+        <ol>
+            <li class="menu-item"><a href="#0">Home</a></li>
+            <li class="menu-item"><a href="#0">About</a></li>
+            <li class="menu-item" aria-haspopup="true">
+                <a href="#0">Widgets</a>
+                <ol class="sub-menu" aria-label="submenu">
+                    <li class="menu-item"><a href="#0">Big Widgets</a></li>
+                    <li class="menu-item"><a href="#0">Bigger Widgets</a></li>
+                    <li class="menu-item"><a href="#0">Huge Widgets</a></li>
+                </ol>
+            </li>
+            <li class="menu-item" aria-haspopup="true">
+                <a href="#0">Kabobs</a>
+                <ol class="sub-menu" aria-label="submenu">
+                    <li class="menu-item"><a href="#0">Shishkabobs</a></li>
+                    <li class="menu-item"><a href="#0">BBQ kabobs</a></li>
+                    <li class="menu-item"><a href="#0">Summer kabobs</a></li>
+                </ol>
+            </li>
+            <li class="menu-item"><a href="#0">Contact</a></li>
+        </ol>
+    </nav>
+</body>
+
+</html>

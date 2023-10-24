@@ -31,7 +31,125 @@
     <link href="css/responsive.css" rel="stylesheet" />
 
 
-
+    <style>
+        /* Define your CSS variables */
+        
+         :root {
+            --lightGrey: #999;
+            --grey: #0c0739;
+            --darkGrey: #333;
+        }
+        /* Reset some default styles */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Define styles for the menu */
+        
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        ol {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.5em 0;
+            list-style: none;
+        }
+        
+        .menu-item {
+            background: var(--grey);
+            position: relative;
+            margin: 0 0.1em;
+            transition: border-bottom 0.23s ease-in-out, background 0.23s linear;
+            cursor: pointer;
+            min-width: 8em;
+            text-align: center;
+        }
+        
+        .menu-item:hover,
+        .menu-item:focus-within {
+            border-bottom-color: var(--green);
+            background: var(--darkGrey);
+        }
+        
+        .sub-menu {
+            visibility: hidden;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            left: 0;
+            margin-top: 1em;
+        }
+        
+        .menu-item:hover .sub-menu,
+        .sub-menu:hover {
+            visibility: visible;
+            opacity: 1;
+            display: flex;
+        }
+        
+        .menu-item {
+            margin: 0.1em 0;
+            padding: 1em;
+            width: 10em;
+            text-align: center;
+            z-index: 2;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        a:focus {
+            outline: none;
+        }
+        
+        @media (max-width: 690px) {
+            .menu {
+                width: 95%;
+                font-size: 2px;
+            }
+            .menu-item {
+                margin: 0.1em;
+            }
+            .menu-item:nth-child(1) {
+                order: 0;
+            }
+            .menu-item:nth-child(2) {
+                order: 1;
+            }
+            .menu-item:nth-child(3) {
+                order: 3;
+            }
+            .menu-item:nth-child(4) {
+                order: 4;
+            }
+            .menu-item:nth-child(5) {
+                order: 2;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .menu {
+                font-size: 12px;
+            }
+        }
+    </style>
 
     <style>
         .center-container {
@@ -320,7 +438,17 @@
                                 <a class="nav-link" href="#Patrons"> Patrons</a>
                             </li>
 
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="#0">Certificates </a>
+                                <ol class="sub-menu" aria-label="submenu">
+                                    <li class="menu-item"><a href="#0">Certificates will be given to participants
+                                        who are having more than 80% attendance and
+                                        assessment score more than 60%.
+                                        Requesting you to share among your
+                                        faculty friends, scholars and peers.</a></li>
 
+                                </ol>
+                            </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="#loc">Location</a>
@@ -356,12 +484,15 @@
                                                 <h5><br><br><br><br> AICTE TRAINING AND LEARNING (ATAL) SPONSORED
 
                                                 </h5>
-                                                <h5>ONE WEEK FDP <br> FACULTY DEVELOPMENT PROGRAMME ON <br>
+                                                <br>
+                                                <h5>ONE WEEK <br> FACULTY DEVELOPMENT PROGRAMME ON <br>
                                                 </h5>
+                                                <br>
                                                 <h3>
-                                                    <DESIGNTHINKING & INNOVATIVE <br>PRODUCT DESIGNING </h3>
+                                                    DESIGN THINKING & INNOVATIVE <br>PRODUCT DESIGNING </h3>
+                                                <br>
 
-                                                <h2>FDP DATES <br> 30 OCTOBER – 04 NOVEMBER, 2023</h2>
+                                                <h4>FDP DATES <br> 30 OCTOBER – 04 NOVEMBER, 2023</h4>
 
                                                 <br><br>
                                                 <a href="https://www.aicte-india.org/atal" class="btn-1">
@@ -412,11 +543,11 @@
                                             <div class="frame" style="text-align:justify; padding: 0 30px; ">
                                                 <h2 style="text-align: center;"><br> About the Institute</h2>
                                                 <p>
-                                                    <strong> Sagi Rama Krishnam Raju Engineering College (SRKREC),</strong> established in 1980, is a self-financed academic institution of coeducation striving to provide a high-quality technical education
+                                                    <strong> Sagi Rama Krishnam Raju Engineering College (SRKREC),</strong> established in 1980, is a self-financed academic institution of co-education striving to provide a high-quality technical education
                                                     to engineering aspirants. Being one of the premier and well-established technical institutions of the country, it continues to render service to the nation and the world at large with its alumni holding
-                                                    highly prestigious positions and making substantial contributions. The president of the institution Sri. S. Prasada Raju carries forward the vision of his father Late Sri Sagi Rama Krishnam Raju, a philanthropist,
-                                                    driving the institution on the academic path of excellence. The college is replete with lush coconut trees spanning across a plot area of 30 acres at China Amiram, Bhimavaram, on the Bhimavaram-Vijayawada
-                                                    state highway and it is also well-connected to all other places by road and rail transport.
+                                                    highly prestigious positions and making substantial contributions.<br> The president of the institution Sri. S. Prasada Raju carries forward the vision of his father Late Sri Sagi Rama Krishnam Raju,
+                                                    a philanthropist, driving the institution on the academic path of excellence. The college is replete with lush coconut trees spanning across a plot area of 30 acres at Chinna Amiram, Bhimavaram, on the
+                                                    Bhimavaram- Vijayawada state highway and it is also well-connected to all other places by road and rail transport.
                                                 </p>
 
                                                 <br>
@@ -468,12 +599,50 @@
                                     <div class="detail-box" style="background-color: rgba(0, 0, 0, 0.5); color:#ffffff;   padding: 0 30px;text-align:justify;">
                                         <h2><br> ABOUT AICTE IDEALAB
                                         </h2>
-                                        <h6>The AICTE IDEALab at SRKR Engineering College AICTE IDEA Lab has been established at SRKREC in 2022 to transform education imparted in the institution to promote multidisciplinary education, innovation, and research
-                                            takes place. IDEA Lab is funded by the All India Council for Technical Education (AICTE), New Delhi. IDEA Lab creates a platform for innovation and research to students and faculty with hands-on experience with
-                                            the latest equipment in order to develop new projects and offer live internships with industry support. As per the need of 21st Century Skill enhancement for students ( like Critical Thinking, Problem-solving,
-                                            Design Thinking, Collaboration, Communication, Life long Learning), New National Educational Policy and Industry 4.0 to promote inter-disciplinary activities amongst different departments of the college to foster
-                                            creativity among students and faculty and also made available all the facilities of IDEA Lab to the Students and Faculty from other colleges and Schools in the surrounding region of our college. The event is
-                                            organized in association with the Computer Science & Design Branch of SRKREC.</h6>
+                                        <h6>The AICTE IDEALAB at SRKR Engineering College has been established in the year 2022 to transform the engineering education imparted in the institution to promote multi- disciplinary approach and learning by doing
+                                            applying innovation and research. IDEA (Idea, Development, Evaluation & Application) Lab is funded by the All India Council for Technical Education (AICTE), New Delhi. that creates a platform for innovation
+                                            and research to students and faculty with hands-on experience with the latest equipment like 3D Printing, FAB Lab, and product design tools in order to develop new projects and offer live internships with industry
+                                            support. IDEA Lab creates the ecosystem for transforming ideation to Prototype or Product.</h6>
+                                        <div style="text-align: center;">
+                                            <a href="https://idealnet.aicte-india.org/" class="btn-1">
+                        More Details
+                      </a>
+                                            <a href="" class="btn-2">
+                        Contact Us
+                      </a></div><br><br>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class=" col-lg-10 mx-auto">
+                                            <div class="img-box">
+                                                <div class="center-container">
+                                                    <div class="scene3d">
+                                                        <div class="object3d" id="obj1">
+                                                            <img src="images/idea_lab.png" id="im1" class="face3d" style="width: 150px;height: 150px;">
+                                                            <img src="images/atal.png" id="im3" class="face3d" style="width: 150px;  height: 150px;">
+                                                            <img src="images/srlogo.png" id="im2" class="face3d" style="width: 150px;  height: 150px;">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail-box" style="background-color: rgba(0, 0, 0, 0.5); color:#ffffff;   padding: 0 30px;text-align:justify;">
+                                        <h4><br>ABOUT COMPUTER SCIENCE & DESIGN</h4>
+                                        <h6>The Computer Science & Design (CSD) branch started at SRKREC from 2021 to impart quality Computer Science education with a focus on Software Development, UI/UX Design, Industry 4.0 and Coding. The branch offers
+                                            a 4 year B.Tech in Computer Science & Design with 60 seats and has active clubs namely Software Development Club, Startup Club, IEI Student Chapter, Swecha Learning Centre. CSD has adopted the new National Education
+                                            Policy (NEP) promoting innovation and entrepreneurship among its students imparting 21st Century Skills creating future ready problem solvers and better citizens.</h6>
                                         <div style="text-align: center;">
                                             <a href="https://idealnet.aicte-india.org/" class="btn-1">
                         More Details
@@ -526,7 +695,7 @@
     <section class="service_section layout_padding" id="service">
         <div class="container">
             <div class="heading_container heading_center">
-                <h1 style="font-size: 50px; color:rgb(112, 10, 10) ">PROGRAM SCHEDULE </h1>
+                <h1 style="font-size: 50px; color:rgb(0, 0, 0) ">PROGRAM SCHEDULE </h1>
             </div>
         </div>
 
@@ -621,7 +790,7 @@
             <tr>
                 <td>
                     <h5>2:00 - 4:30</h5>
-                    <h6> Importance of Product Design</h6>
+                    <h6> Practical Session on solving different problems using Design Thinking</h6>
                 </td>
                 <td>
                     <h5>2:00 - 4:30</h5>
@@ -755,26 +924,27 @@
                     <h5 style="display: inline;">Bhavani Prasad Karrotu</h5><br>
                     <h6 style="display: inline;">Co-Founder & Design head, PurpleLane , Hyderabad</h6>
                 </li>
+                <br>
                 <li>
                     <h5 style="display: inline;">Venkatesh Nene </h5><br>
                     <h6 style="display: inline;">Senior UX Designer , IVY Comptech, Hyderabad</h6>
-                </li>
+                </li><br>
                 <li>
                     <h5 style="display: inline;">Nanda Kishore </h5><br>
                     <h6 style="display: inline;">Product Designer, Bizom, Bangalore</h6>
-                </li>
+                </li><br>
                 <li>
                     <h5 style="display: inline;">V.V. Durga Kiran </h5><br>
                     <h6 style="display: inline;">Associate S/w Engineer, Cognizant Technology Solutions Hyderabad</h6>
-                </li>
+                </li><br>
                 <li>
                     <h5 style="display: inline;">Mantena Siva Pavan Kumara Raju </h5><br>
                     <h6 style="display: inline;"> Director & Founder, Carryshare Solution Pvt Ltd, WG Dist, AP</h6>
-                </li>
+                </li><br>
                 <li>
                     <h5 style="display: inline;">Dr. Suresh Babu Mudunuri </h5><br>
                     <h6 style="display: inline;"> Professor, SRKR Engineering College, Bhimavaram</h6>
-                </li>
+                </li><br>
             </ul>
         </section>
 
@@ -980,6 +1150,19 @@
                     <h5 style="display: inline;">Sri. S. V. Ranga Raju </h5>-
                     <h6 style="display: inline;">Vice-President-II, SRKREC</h6>
                 </li>
+                <li>
+                    <h5 style="display: inline;">Sri. S. R. K. Nishant Varma </h5>-
+                    <h6 style="display: inline;">Secretary & Correspondent</h6>
+                </li>
+                <li>
+                    <h5 style="display: inline;">Dr. K. S. Vijaya Narasimha Raju </h5>-
+                    <h6 style="display: inline;">Member, Governing Body</h6>
+                </li>
+                <li>
+                    <h5 style="display: inline;">Sri. S. Satya Pratik Varma </h5>-
+                    <h6 style="display: inline;">Member, Governing Body</h6>
+                </li>
+
             </ul>
         </section>
 
@@ -989,13 +1172,14 @@
 
             </h2>
             <ul style="list-style-type: none; padding: 0;">
-                <li>
-                    <h5 style="display: inline;">Sri. S. R. K. Nishant Varma</h5> -
-                    <h6 style="display: inline;">Secretary & Correspondent, SRKREC</h6>
-                </li>
+
                 <li>
                     <h5 style="display: inline;">Dr. M. Jagapathi Raju</h5> -
                     <h6 style="display: inline;">Principal, SRKREC, Convenor</h6>
+                </li>
+                <li>
+                    <h5 style="display: inline;">Dr. K.V. Murali Krishnam Raju</h5> -
+                    <h6 style="display: inline;">Principal, SRKREC</h6>
                 </li>
             </ul>
         </section>
@@ -1008,11 +1192,11 @@
             <ul style="list-style-type: none; padding: 0;">
                 <li>
                     <h5 style="display: inline;">Dr. Suresh Babu Mudunuriv </h5>-
-                    <h6 style="display: inline;"> Professor IT, SRKREC</h6>
+                    <h6 style="display: inline;">Programme Co-Ordinator, CSD & <br> Professor IT, SRKREC</h6>
                 </li>
                 <li>
                     <h5 style="display: inline;">Dr. NGK Murthy</h5> -
-                    <h6 style="display: inline;"> Professor IT, SRKREC</h6>
+                    <h6 style="display: inline;">Head, Technology Centre & Coordinator, <br> IDEALab Professor IT, SRKREC</h6>
                 </li>
             </ul>
         </section>
@@ -1020,12 +1204,79 @@
     </div>
     <br><br><br><br>
 
+    <div class="heading_container heading_center">
+        <h1>ORGANIZING TEAM</h1>
+    </div>
+    <br>
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 5px; text-align:center; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+
+        <section>
+
+            <ul style="list-style-type: none; padding: 0;">
+                <li>
+                    <h5 style="display: inline;">Ms. M. Sindhuri Suseela</h5><br>
+                    <h6 style="display: inline;"> Asst. Professor, CSD, SRKREC</h6>
+                </li>
+                <br>
+                <li>
+                    <h5 style="display: inline;">Mr. N. Praveen Kumar</h5><br>
+                    <h6 style="display: inline;">Asst. Professor, CSD, SRKREC</h6>
+                </li><br>
+                <li>
+                    <h5 style="display: inline;"> Ms. E. Rama Lakshmi </h5><br>
+                    <h6 style="display: inline;">Asst. Professor, CSD, SRKREC</h6>
+                </li><br>
+                <li>
+                    <h5 style="display: inline;">Ms. A. Aswini </h5><br>
+                    <h6 style="display: inline;">Asst. Professor, CSD, SRKREC</h6>
+                </li><br>
+                <li>
+                    <h5 style="display: inline;"> Mr. Mohan Krishna</h5><br>
+                    <h6 style="display: inline;"> Asst. Professor, CSD, SRKREC</h6>
+                </li><br>
+                <li>
+                    <h5 style="display: inline;">Mr. K. Sunil Varma</h5><br>
+                    <h6 style="display: inline;"> Asst. Professor, CSD, SRKREC</h6>
+                </li><br>
+            </ul>
+        </section>
 
 
+    </div>
+    <br><br><br>
+
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 5px; text-align:left; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+
+        <h5>Respected Faculty <br> Greetings from AICTE IDEALAb and<br> Computer Science and Design (CSD) Branch,<br> SRKR Engineering College, Bhimavaram! <br><br>We are delighted to inform you that we are organizing a<br> One Week ATAL FDP on <br>Design
+            Thinking and Innovative Product Design <br>from <br>30th October - 4th November 2023. <br><br>This 6 day FDP is sponsored by AICTE ATAL<br> Academy and Faculty/Research & PG Scholars from <br>AICTE approved institutions can apply. <br><br><br>TOPICS
+            COVERED:
+            <br>Design Thinking <br>Software UI/UX Design<br> Rapid Prototyping<br> Product Development with demos and hands-on sessions.<br><br> Registration is FREE. <br>Registration Link:
+            <a href="  https://atalacademy.aicte-india.org/login">
+                <i aria-hidden="true"></i>
+                <span>
+                    https://atalacademy.aicte-india.org/login
+</span>
+            </a> <br><br> Last Date of Registration:
+            <br>20th October 2023 <br><br>Acceptance List: <br>22nd October 2023<br><br> Certificates will be given to participants <br>who are having more than 80% attendance and <br> assessment score more than 60%. <br>Requesting you to share among
+            your
+            <br> faculty friends, scholars and peers.<br><br> Regards <br>Dr.Suresh Mudunuri <br>FDP Co-ordinator<br> Dr. NGK Murthy<br> FDP Co-cordinator<br> Ph:9866600002,9848427327
+            <br>Email:
+            <a href=" csd@srkrec.edu.in">
+                <i aria-hidden="true"></i>
+                <span>
+                    csd@srkrec.edu.in</span></h5>
+
+
+    </div>
+
+    <br><br><br>
 
     <!-- contact section -->
 
     <!-- end contact section -->
+
+    <div id="loc"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.6619151182667!2d81.4938112734315!3d16.543157226579797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a362d5e7ef94f99%3A0x3a2b78f9b48493fe!2sSRKR%20Engineering%20College!5e0!3m2!1sen!2sin!4v1697108800412!5m2!1sen!2sin"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
 
 
@@ -1058,13 +1309,14 @@ SRKR Engineering College,
                             <a href="">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
-                  Call +919866600002
+                  Call: +91 9866600002
+
                 </span>
                             </a>
                             <a href="">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span>
-                  suresh.mudunuri@srkrec.edu.in
+                                    Email: atalfdp2023@srkrec.edu.in
                 </span>
                             </a>
                         </div>
@@ -1108,10 +1360,24 @@ SRKR Engineering College,
                         </div>
                     </div>
                 </div>
-                <div id="loc"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.6619151182667!2d81.4938112734315!3d16.543157226579797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a362d5e7ef94f99%3A0x3a2b78f9b48493fe!2sSRKR%20Engineering%20College!5e0!3m2!1sen!2sin!4v1697108800412!5m2!1sen!2sin"
-                        width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+
+                <div class="col-md-3">
+
+                    <h4>
+                        INFO
+                    </h4>
+
+
+
+                    Regards Dr.Suresh Mudunuri FDP Co-ordinator Dr. NGK Murthy FDP Co-cordinator Ph:9866600002,9848427327 Email: csd@srkrec.edu.in
+
+                </div>
+
 
             </div>
+        </div>
+
 
         </div>
     </section>
