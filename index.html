@@ -374,6 +374,103 @@
                 transform: rotateY(360deg)
             }
         }
+         /* Add CSS styles for the container */
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  /* Add CSS styles for the background image */
+  .background-image {
+    background-image: url('images/heloo.avif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  /* Add CSS styles for the text */
+  .text {
+    position: absolute;
+    top: 0; /* Place text at the top */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    padding: 20px; /* Add some padding for spacing */
+  }
+
+  /* Add CSS styles for the start button */
+  .glow-on-hover {
+    position: absolute;
+    bottom: 30px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    z-index: 5; /* Increase the z-index to be above the background */
+    border-radius: 10px;
+  }
+
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  .glow-on-hover:active {
+    color: #000;
+  }
+
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+  .center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Set the desired height */
+    width: 400px;  /* Set the desired width */
+  }
+
+
     </style>
 
 
@@ -599,6 +696,7 @@
                                     <div class="detail-box" style="background-color: rgba(0, 0, 0, 0.5); color:#ffffff;   padding: 0 30px;text-align:justify;">
                                         <h2><br> ABOUT AICTE IDEALAB
                                         </h2>
+                                        
                                         <h6>The AICTE IDEALAB at SRKR Engineering College has been established in the year 2022 to transform the engineering education imparted in the institution to promote multi- disciplinary approach and learning by doing
                                             applying innovation and research. IDEA (Idea, Development, Evaluation & Application) Lab is funded by the All India Council for Technical Education (AICTE), New Delhi. that creates a platform for innovation
                                             and research to students and faculty with hands-on experience with the latest equipment like 3D Printing, FAB Lab, and product design tools in order to develop new projects and offer live internships with industry
@@ -690,6 +788,32 @@
         <!-- end slider section -->
     </div>
     <br><br>
+    <div class="container">
+        <div class="background-image"></div>
+        <div class="text">
+          <h2><strong>Join Our Faculty Development Programme</strong></h2>
+          <p><h6>"Empower your teaching skills and inspire your students"</h6></p>
+          <div class="center-image">
+            <img src="images/teej.jpg" alt="Your Image" width="100%" height="100%">
+          </div>
+          
+          <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    
+                    <button class="glow-on-hover" type="button">Get started</button>
+                </div>
+    
+            </div>
+        </div>
+        
+    
+    
+    
+    
+        </div>
+      </div>
+    
 
 
     <section class="service_section layout_padding" id="service">
